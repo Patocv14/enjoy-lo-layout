@@ -1,0 +1,213 @@
+.Picks {
+  width: 100%;
+  height: var(--box-pick-height);
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .Pick {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #0a0a0a;
+    border-left: solid var(--border-between-color) 1px;
+
+    &.Active {
+      .PlayerName {
+        height: calc(2 * var(--pick-name-height)) !important;
+        margin-top: calc(-1 * var(--pick-name-height));
+        line-height: calc(2 * var(--pick-name-height));
+      }
+    }
+
+    &:first-child {
+      border: none;
+    }
+
+    .SummonerSpells {
+      position: absolute;
+      top: calc(var(--box-pick-height) - 30px - var(--summoner-spell-size));
+      right: 0;
+      z-index: 10;
+
+      img {
+        height: var(--summoner-spell-size);
+        width: var(--summoner-spell-size);
+      }
+    }
+
+    .PickImage {
+      position: relative;
+      height: calc(100% - var(--pick-name-height));
+
+      img {
+        width: calc(100% + calc(2 * var(--pick-image-crop)));
+        object-fit: cover;
+        object-position: calc(-1 * var(--pick-image-crop))
+          calc(-1 * var(--pick-image-crop));
+      }
+
+      &.Active::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% + var(--pick-name-height));
+        opacity: 0.5;
+        animation: pulsate-pick 1.5s infinite;
+        transition: height 1s;
+
+        // z-index: 20;
+      }
+    }
+  }
+}
+
+&.TeamBlue .Picks {
+  .PlayerName {
+    transition: height 1s, font-size 1s, margin-top 1s, background-color 0.3s,
+      color 0.3s;
+    height: 120px;
+    width: 135px;
+    color: white;
+    background: rgba(63, 78, 114, 0.758);
+    backdrop-filter: blur(4.9px);
+    transform: rotate(-45deg) translate(47px, 28px);
+    text-align: center;
+    border-radius: 4px;
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(119, 145, 209, 0.837);
+  }
+  .PlayerName::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    border-radius: 4px;
+    background-color: var(--color-blue);
+  }
+}
+
+&.TeamBlue .Picks .Pick {
+  &:last-child {
+    border-right: solid var(--border-between-color) 1px;
+  }
+  &:first-child {
+    border: none;
+  }
+  &.Active {
+    .PlayerName {
+      position: relative;
+      background: rgba(63, 78, 114, 0.86);
+      transform: rotate(137deg) translate(-16px, -84px);
+      border-radius: 4px;
+      backdrop-filter: blur(4.9px);
+      -webkit-backdrop-filter: blur(4.9px);
+      border: 1px solid rgba(119, 145, 209, 0.776);
+      color: white;
+    }
+    .PlayerName::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      border-radius: 4px;
+      background-color: var(--color-blue);
+    }
+  }
+  span {
+    position: absolute;
+    color: white;
+    z-index: 10;
+    bottom: 10px;
+    right: 6px;
+    font-weight: normal;
+    font-size: 15px;
+  }
+}
+
+&.TeamRed .Picks {
+  .PlayerName {
+    transition: height 1s, font-size 1s, margin-top 1s, background-color 0.3s,
+      color 0.3s;
+    height: 100px;
+    width: 135px;
+    color: white;
+    background: rgba(118, 63, 63, 0.694);
+    backdrop-filter: blur(4.9px);
+    transform: rotate(-140deg) translate(20px, -10px);
+    text-align: center;
+    border-radius: 4px;
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(209, 119, 119, 0.31);
+  }
+  .PlayerName::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    border-radius: 4px;
+    background-color: var(--color-red);
+  }
+}
+
+&.TeamRed .Picks .Pick {
+  &:first-child {
+    border-left: solid var(--border-between-color) 1px;
+  }
+  &.Active {
+    .PlayerName {
+      position: relative;
+      background: rgba(118, 63, 63, 0.694);
+      transform: rotate(-140deg) translate(-5px, -65px);
+      border-radius: 4px;
+      backdrop-filter: blur(4.9px);
+      -webkit-backdrop-filter: blur(4.9px);
+      border: 1px solid rgb(209, 119, 119);
+      color: white;
+    }
+    .PlayerName::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      border-radius: 4px;
+      background-color: var(--color-red);
+    }
+  }
+  span {
+    position: absolute;
+    color: white;
+    z-index: 10;
+    bottom: 10px;
+    left: 6px;
+    font-weight: normal;
+    font-size: 15px;
+  }
+}
+
+@keyframes pulsate-pick {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
