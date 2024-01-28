@@ -57,6 +57,7 @@ function App() {
     if (error) {
         return <Error message={error} />
     }
+    console.log(config)
 
     if (config) {
         return (

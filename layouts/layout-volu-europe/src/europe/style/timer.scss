@@ -1,13 +1,12 @@
 .Timer {
-  position: relative;
+  position: absolute;
   width: 100%;
-  // height: var(--box-timer-height);
   font-size: 50px;
   text-align: center;
   overflow: visible;
 
-  height: 938px;
-  margin-top: -286px;
+  height: 609px;
+  margin-top: -346px;
 
   &::after {
     content: "";

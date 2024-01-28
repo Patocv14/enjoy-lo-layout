@@ -29,6 +29,7 @@ const putPlaceholders = (team,  backendUrl) => {
           loadingImg: pickSplashes[i]
         }
       });
+      
     } else {
       // Exists, check!
       const pick = team.picks[i];
@@ -36,8 +37,6 @@ const putPlaceholders = (team,  backendUrl) => {
         pick.champion = {
           loadingImg: pickSplashes[i]
         };
-        // pick.spell1 = null;
-        // pick.spell2 = null;
       }
 
       if (pick.spell1) {
@@ -71,6 +70,8 @@ const putPlaceholders = (team,  backendUrl) => {
     }
   }
 };
+
+
 
 const convertState = (state, backendUrl) => {
   if (Object.keys(state).length !== 0) {

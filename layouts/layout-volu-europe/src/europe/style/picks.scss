@@ -12,6 +12,7 @@
     overflow: hidden;
     background-color: #0a0a0a;
     border-left: solid var(--border-between-color) 1px;
+    
 
     &.Active {
       .PlayerName {
@@ -46,6 +47,7 @@
         object-fit: cover;
         object-position: calc(-1 * var(--pick-image-crop))
           calc(-1 * var(--pick-image-crop));
+          
       }
 
       &.Active::before {
@@ -58,7 +60,6 @@
         opacity: 0.5;
         animation: pulsate-pick 1.5s infinite;
         transition: height 1s;
-
         // z-index: 20;
       }
     }
@@ -78,7 +79,6 @@
     text-align: center;
     border-radius: 4px;
     -webkit-backdrop-filter: blur(4.9px);
-    border: 1px solid rgba(119, 145, 209, 0.837);
   }
   .PlayerName::after {
     content: '';
@@ -91,6 +91,7 @@
     border-radius: 4px;
     background-color: var(--color-blue);
   }
+
 }
 
 &.TeamBlue .Picks .Pick {
@@ -108,7 +109,6 @@
       border-radius: 4px;
       backdrop-filter: blur(4.9px);
       -webkit-backdrop-filter: blur(4.9px);
-      border: 1px solid rgba(119, 145, 209, 0.776);
       color: white;
     }
     .PlayerName::after {

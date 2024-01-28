@@ -49,9 +49,6 @@ export default class Overlay extends React.Component {
       this.setState({ openingAnimationPlayed: false });
       this.setState({ currentAnimationState: css.TheAbsoluteVoid });
     }
-
-    console.log(state);
-
     const renderBans = (teamState) => {
       const list = teamState.bans.map((ban, idx) => (
         <Ban key={`ban-${idx}`} {...ban} />
@@ -60,14 +57,17 @@ export default class Overlay extends React.Component {
       return <div className={cx(css.BansBox)}>{list}</div>;
     };
 
+    
+
     const renderTeam = (teamName, teamConfig, teamState) => (
       <div className={cx(css.Team, teamName)}>
         <div className={cx(css.teamBannerName)}>
           <h1>{teamConfig.name}</h1>
+          <div className={css.TeamScore}>{teamConfig.score}</div>
         </div>
         <div className={cx(css.Picks)}>
           {teamState.picks.map((pick, idx) => (
-            <Pick key={`pick-${idx}`} config={this.props.config} {...pick} />
+            <Pick key={`pick-${idx}`} config={this.props.config} {...pick}  />
           ))}
         </div>
         <div className={css.BansWrapper}>
@@ -76,9 +76,6 @@ export default class Overlay extends React.Component {
               [css.WithScore]: config.frontend.scoreEnabled,
             })}
           >
-            {teamName === css.TeamBlue && config.frontend.scoreEnabled && (
-              <div className={css.TeamScore}>{teamConfig.score}</div>
-            )}
             {teamName === css.TeamRed && renderBans(teamState)}
             <div
               className={cx(css.TeamName, {
@@ -90,9 +87,7 @@ export default class Overlay extends React.Component {
               )}
             </div>
             {teamName === css.TeamBlue && renderBans(teamState)}
-            {teamName === css.TeamRed && config.frontend.scoreEnabled && (
-              <div className={css.TeamScore}>{teamConfig.score}</div>
-            )}
+            
           </div>
         </div>
       </div>
