@@ -63,7 +63,6 @@ export default class Overlay extends React.Component {
       <div className={cx(css.Team, teamName)}>
         <div className={cx(css.teamBannerName)}>
           <h1>{teamConfig.name}</h1>
-          <div className={css.TeamScore}>{teamConfig.score}</div>
         </div>
         <div className={cx(css.Picks)}>
           {teamState.picks.map((pick, idx) => (
@@ -141,7 +140,7 @@ export default class Overlay extends React.Component {
                 {state.timer >= 100 && (
                   <div className={cx(css.TimerChars)}>{state.timer}</div>
                 )}
-                <div className={cx(css.Patch)}>{state.state}</div>
+                <div className={cx(css.Patch)}>Patch: { state.meta.version.champion }</div>
               </div>
             </div>
             {renderTeam(css.TeamBlue, config.frontend.blueTeam, state.blueTeam)}
@@ -150,6 +149,12 @@ export default class Overlay extends React.Component {
         )}
         <div className={cx(css.Logo)}>
           <img src={logo} alt="" />
+        </div>
+        <div className={cx(css.Circulo)}>
+          
+        </div>
+        <div className={cx(css.Circulo2)}>
+          
         </div>
       </div>
     );

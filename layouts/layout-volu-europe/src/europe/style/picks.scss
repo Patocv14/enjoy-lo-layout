@@ -73,7 +73,7 @@
     height: 120px;
     width: 135px;
     color: white;
-    background: rgba(63, 78, 114, 0.758);
+    background: rgba(33, 70, 155, 0.758);
     backdrop-filter: blur(4.9px);
     transform: rotate(-45deg) translate(47px, 28px);
     text-align: center;
@@ -104,7 +104,7 @@
   &.Active {
     .PlayerName {
       position: relative;
-      background: rgba(63, 78, 114, 0.86);
+      background: rgba(33, 70, 155, 0.758);
       transform: rotate(137deg) translate(-16px, -84px);
       border-radius: 4px;
       backdrop-filter: blur(4.9px);
@@ -141,13 +141,12 @@
     height: 100px;
     width: 135px;
     color: white;
-    background: rgba(118, 63, 63, 0.694);
+    background: rgba(163, 33, 33, 0.732);
     backdrop-filter: blur(4.9px);
     transform: rotate(-140deg) translate(20px, -10px);
     text-align: center;
     border-radius: 4px;
     -webkit-backdrop-filter: blur(4.9px);
-    border: 1px solid rgba(209, 119, 119, 0.31);
   }
   .PlayerName::after {
     content: '';
@@ -169,12 +168,11 @@
   &.Active {
     .PlayerName {
       position: relative;
-      background: rgba(118, 63, 63, 0.694);
+      background: rgba(163, 33, 33, 0.732);
       transform: rotate(-140deg) translate(-5px, -65px);
       border-radius: 4px;
       backdrop-filter: blur(4.9px);
       -webkit-backdrop-filter: blur(4.9px);
-      border: 1px solid rgb(209, 119, 119);
       color: white;
     }
     .PlayerName::after {

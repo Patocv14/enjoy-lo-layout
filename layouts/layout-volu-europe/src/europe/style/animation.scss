@@ -5,7 +5,7 @@
 }
 
 .AnimationHidden {
-  .Timer {
+  .Timer  {
     position: relative;
     /* bottom: -130px; */
     bottom: -300px;
@@ -19,6 +19,9 @@
     opacity: 0;
   }
   .Logo, .Patch {
+    opacity: 0;
+  }
+  .Circle {
     opacity: 0;
   }
 }

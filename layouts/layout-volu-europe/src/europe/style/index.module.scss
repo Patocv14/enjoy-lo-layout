@@ -25,7 +25,7 @@ body {
     width: var(--box-width);
     height: calc(var(--box-pick-height) + var(--box-ban-height));
     
-    bottom: 100px;
+    bottom: 99px;
     z-index: 999;
     left: 50%;
     transform: translateX(-50%);
@@ -34,9 +34,9 @@ body {
 
   .Patch {
     height: var(--box-patch-height);
-    margin-top: 0px;
+    margin-top: 80px;
     margin-left: 9px;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     color: white;
 
@@ -49,12 +49,13 @@ body {
     z-index: 10;
 
     img {
-      width: 100px;
+      width: 80px;
       position: absolute;
-      bottom: 40px;
-      left: 47.5%;
+      bottom: 55px;
+      left: 48%;
       margin: 0 auto;
       padding-top: 10%;
+      z-index: 20;
     }
   }
 
@@ -64,20 +65,53 @@ body {
 
 .teamBannerName {
   background: rgb(65, 65, 65);
-  background: linear-gradient(
-    177deg,
-    rgba(65, 65, 65, 0.42620798319327735) 0%,
-    rgba(0, 0, 0, 1) 79%
-  );
-  color: white;
-  margin: 0;
+  
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  color: white;
+  height: 63px;
+  margin: 0;
+  animation: logo-box 2s linear;
   
 
   h1 {
     margin: 0;
     padding-left: 20px;
+  }
+}
+
+.Circulo {
+  border-bottom: 100px solid rgba(6, 6, 6, 0.883);
+  border-left: 37px solid transparent;
+  border-right: 37px solid transparent;
+  height: 0;
+  width: 238px;
+  rotate: 180deg;
+  position: absolute;
+  bottom: 55px;
+  left: 43.8%;
+  animation: logo-box 2s linear;
+}
+
+.Circulo2 {
+  border-bottom: 60px solid rgba(6, 6, 6, 0.883);
+  height: 0;
+  width: 162px;
+  position: absolute;
+  top: 47.5%;
+  left: 45.8%;
+  animation: logo-box 2s linear;
+}
+
+@keyframes logo-box {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
