@@ -12,7 +12,6 @@
     overflow: hidden;
     background-color: #0a0a0a;
     border-left: solid var(--border-between-color) 1px;
-    
 
     &.Active {
       .PlayerName {
@@ -47,7 +46,6 @@
         object-fit: cover;
         object-position: calc(-1 * var(--pick-image-crop))
           calc(-1 * var(--pick-image-crop));
-          
       }
 
       &.Active::before {
@@ -91,7 +89,6 @@
     border-radius: 4px;
     background-color: var(--color-blue);
   }
-
 }
 
 &.TeamBlue .Picks .Pick {

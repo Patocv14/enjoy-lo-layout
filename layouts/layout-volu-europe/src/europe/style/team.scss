@@ -43,7 +43,7 @@
       // );
       background: linear-gradient(
         -177deg,
-        rgba(0, 72, 255, 0.608) 0%,
+        var(--color-blue) 0%,
         rgba(0, 0, 0, 1) 79%
       );
       justify-content: end;
@@ -76,7 +76,6 @@
           -ms-transform: skew(-20deg);
           -o-transform: skew(-20deg);
           transform: skew(-20deg);
-          
         }
       }
     }
@@ -90,7 +89,7 @@
             rgba(0, 0, 0, 0) 0%,
             white 250%
           );
-        }  
+        }
       }
     }
 
@@ -111,7 +110,7 @@
       // );
       background: linear-gradient(
         177deg,
-        rgba(255, 0, 0, 0.639) 0%,
+        var(--color-red) 0%,
         rgb(37, 38, 49) 79%
       );
     }
