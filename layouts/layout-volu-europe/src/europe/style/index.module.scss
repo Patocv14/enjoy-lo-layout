@@ -24,7 +24,7 @@ body {
     color: white;
     width: var(--box-width);
     height: calc(var(--box-pick-height) + var(--box-ban-height));
-    
+
     bottom: 99px;
     z-index: 999;
     left: 50%;
@@ -65,14 +65,13 @@ body {
 
 .teamBannerName {
   background: rgb(65, 65, 65);
-  
+
   display: flex;
   align-items: center;
   color: white;
   height: 63px;
   margin: 0;
   animation: logo-box 2s linear;
-  
 
   h1 {
     margin: 0;
@@ -87,19 +86,10 @@ body {
   height: 0;
   width: 238px;
   rotate: 180deg;
+  transform: rotateX(180deg);
   position: absolute;
   bottom: 55px;
   left: 43.8%;
-  animation: logo-box 2s linear;
-}
-
-.Circulo2 {
-  border-bottom: 60px solid rgba(6, 6, 6, 0.883);
-  height: 0;
-  width: 162px;
-  position: absolute;
-  top: 47.5%;
-  left: 45.8%;
   animation: logo-box 2s linear;
 }
 

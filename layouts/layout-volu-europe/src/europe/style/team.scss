@@ -49,6 +49,12 @@
       justify-content: end;
       padding-right: 20px;
     }
+    .textTeamBanner {
+      font-size: 40px;
+      position: absolute;
+      left: 0;
+      margin-left: 20px;
+    }
 
     .Bans {
       .Ban {
@@ -113,6 +119,12 @@
         var(--color-red) 0%,
         rgb(37, 38, 49) 79%
       );
+    }
+    .textTeamBanner {
+      font-size: 40px;
+      position: absolute;
+      right: 0;
+      margin-right: 20px;
     }
 
     .Bans {

@@ -23,10 +23,8 @@ const Pick = (props) => (
       >
         <img src={props.champion.loadingImg} alt="champ" />
       </div>
-      <div className={cx(css.PlayerName)}>
-        {/* <span>{props.displayName}</span> */}
-      </div>
-        <span>PatoCrfatHD</span>
+      <div className={cx(css.PlayerName)}></div>
+      <span>{props.displayName}</span>
     </div>
   </>
 );

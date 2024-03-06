@@ -57,16 +57,15 @@ export default class Overlay extends React.Component {
       return <div className={cx(css.BansBox)}>{list}</div>;
     };
 
-    
-
     const renderTeam = (teamName, teamConfig, teamState) => (
       <div className={cx(css.Team, teamName)}>
         <div className={cx(css.teamBannerName)}>
           <h1>{teamConfig.name}</h1>
+          <p className={cx(css.textTeamBanner)}>{teamConfig.score}</p>
         </div>
         <div className={cx(css.Picks)}>
           {teamState.picks.map((pick, idx) => (
-            <Pick key={`pick-${idx}`} config={this.props.config} {...pick}  />
+            <Pick key={`pick-${idx}`} config={this.props.config} {...pick} />
           ))}
         </div>
         <div className={css.BansWrapper}>
@@ -86,7 +85,6 @@ export default class Overlay extends React.Component {
               )}
             </div>
             {teamName === css.TeamBlue && renderBans(teamState)}
-            
           </div>
         </div>
       </div>
@@ -140,7 +138,9 @@ export default class Overlay extends React.Component {
                 {state.timer >= 100 && (
                   <div className={cx(css.TimerChars)}>{state.timer}</div>
                 )}
-                <div className={cx(css.Patch)}>Patch: { state.meta.version.champion }</div>
+                <div className={cx(css.Patch)}>
+                  Patch: {state.meta.version.champion}
+                </div>
               </div>
             </div>
             {renderTeam(css.TeamBlue, config.frontend.blueTeam, state.blueTeam)}
@@ -150,12 +150,8 @@ export default class Overlay extends React.Component {
         <div className={cx(css.Logo)}>
           <img src={logo} alt="" />
         </div>
-        <div className={cx(css.Circulo)}>
-          
-        </div>
-        <div className={cx(css.Circulo2)}>
-          
-        </div>
+        <div className={cx(css.Circulo)}></div>
+        <div className={cx(css.Circulo2)}></div>
       </div>
     );
   }

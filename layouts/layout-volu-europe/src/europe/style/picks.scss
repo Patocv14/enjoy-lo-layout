@@ -57,6 +57,7 @@
         height: calc(100% + var(--pick-name-height));
         opacity: 0.5;
         animation: pulsate-pick 1.5s infinite;
+
         transition: height 1s;
         // z-index: 20;
       }
