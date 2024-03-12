@@ -1,19 +1,25 @@
 <svg width="260" height="560" xmlns="http://www.w3.org/2000/svg">
- <title>bot_splash_placeholder_red</title>
+ <title>top_splash_placeholder_blue</title>
 
  <g>
   <title>Layer 1</title>
-  <g stroke="null">
-   <title stroke="null">bot_splash_placeholder</title>
-   <g stroke="null">
+  <g stroke="null" id="svg_7">
+   <title stroke="null">bot_splash_placeholder_blue</title>
+   <g stroke="null" id="svg_8">
     <title stroke="null">Layer 1</title>
-    <g stroke="null" id="svg_15">
-     <g stroke="null" id="svg_18" data-name="Ebene 2">
-      <rect stroke="null" fill=" rgb(175, 0, 0)" class="cls-1" x="317.68041" y="503.47416" width="24" height="24" id="svg_20" transform="matrix(-0.632877 0 0 -0.632877 407.817 390.786)"/>
-      <polygon stroke="null" fill=" rgb(175, 0, 0)" class="cls-1" points="180.81722497600276,79.23094510063993 180.81722497600276,46.2010992325836 214.16985095571363,46.2010992325836 221.84030022749903,38.6065788269043 173.22270827507418,38.6065788269043 173.22270827507418,86.74952182121024 180.81722497600276,79.23094510063993 " id="svg_19"/>
-     </g>
-     <g stroke="null" id="svg_16">
-      <polygon stroke="null" fill=" rgb(255, 0, 0)" class="cls-2" points="216.25832267234,51.896979348778586 216.25832267234,81.64218951941939 186.51310138744702,81.64218951941939 177.01995921603702,91.13534650983229 225.75146484375,91.13534650983229 225.75146484375,42.40384088211931 216.25832267234,51.896979348778586 " id="svg_17"/>
+    <g stroke="null" id="svg_11">
+     <title stroke="null">bot_splash_placeholder</title>
+     <g stroke="null" id="svg_12">
+      <title stroke="null">Layer 1</title>
+      <g stroke="null" id="svg_13">
+       <g stroke="null" data-name="Ebene 2" id="svg_16">
+        <rect stroke="null" transform="matrix(-0.657279 0 0 -0.650132 395.574 400.277)" id="svg_18" fill="#666" height="24" width="24" y="503.27047" x="289.56242" class="cls-1"/>
+        <polygon stroke="null" id="svg_17" fill="#666" points="178.30220484733582,80.36021876335144 178.30220484733582,46.4298255443573 212.94081568717957,46.4298255443573 220.90700221061707,38.628247022628784 170.41486048698425,38.628247022628784 170.41486048698425,88.08378291130066 178.30220484733582,80.36021876335144 " class="cls-1"/>
+       </g>
+       <g stroke="null" id="svg_14">
+        <polygon stroke="null" id="svg_15" fill="#fff" points="215.10980677604675,52.28100275993347 215.10980677604675,82.83722376823425 184.21768641471863,82.83722376823425 174.3585250377655,92.58919215202332 224.96896815299988,92.58919215202332 224.96896815299988,42.529045820236206 215.10980677604675,52.28100275993347 " class="cls-2"/>
+       </g>
+      </g>
      </g>
     </g>
    </g>

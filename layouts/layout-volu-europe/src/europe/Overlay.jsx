@@ -59,10 +59,10 @@ export default class Overlay extends React.Component {
 
     const renderTeam = (teamName, teamConfig, teamState) => (
       <div className={cx(css.Team, teamName)}>
-        <div className={cx(css.teamBannerName)}>
+        {/* <div className={cx(css.teamBannerName)}>
           <h1>{teamConfig.name}</h1>
           <p className={cx(css.textTeamBanner)}>{teamConfig.score}</p>
-        </div>
+        </div> */}
         <div className={cx(css.Picks)}>
           {teamState.picks.map((pick, idx) => (
             <Pick key={`pick-${idx}`} config={this.props.config} {...pick} />
@@ -129,15 +129,13 @@ export default class Overlay extends React.Component {
                       .toString()
                       .split('')
                       .map((char, idx) => (
-                        <div key={`div-${idx}`} className={cx(css.TimerChar)}>
-                          {char}
-                        </div>
+                        <div key={`div-${idx}`}>{char}</div>
                       ))}
                   </div>
                 )}
-                {state.timer >= 100 && (
+                {/* {state.timer >= 100 && (
                   <div className={cx(css.TimerChars)}>{state.timer}</div>
-                )}
+                )} */}
                 <div className={cx(css.Patch)}>
                   Patch: {state.meta.version.champion}
                 </div>

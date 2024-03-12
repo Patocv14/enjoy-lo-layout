@@ -9,7 +9,7 @@
   margin-top: -346px;
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -51,19 +51,22 @@
   }
 
   &.Both {
-    background: linear-gradient(to right, var(--color-blue) 0%, var(--color-red) 100%)
+    background: linear-gradient(
+      to right,
+      var(--color-blue) 0%,
+      var(--color-red) 100%
+    );
   }
 
   .TimerChars {
     display: flex;
     justify-content: center;
+    text-align: center;
     font-size: 90px;
-    margin:auto;
     margin-top: 340px;
     padding-top: 46px;
 
     .TimerChar {
-      width: 40px;
       margin: 0 2px;
       text-align: right;
 
